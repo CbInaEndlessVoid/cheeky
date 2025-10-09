@@ -12,7 +12,6 @@ document.body.style.overflow = "hidden";
 document.documentElement.style.overflow = "hidden";
 
 
-// Play background dog song
 const dogSong = new Audio("https://files.catbox.moe/75e8e5.mp3");
 dogSong.loop = true;
 dogSong.playbackRate = 1;
@@ -22,13 +21,10 @@ window.onload = function() {
     });
 };
 
-// Button click behavior
 button.onclick = function() {
-    // Play bark
     const bark = new Audio("https://files.catbox.moe/183ti5.wav");
     bark.play();
 
-    // Increment count and save
     count += 1;
     randomNum.textContent = count;
     localStorage.setItem("clickCount", count);
@@ -100,4 +96,5 @@ button.draggable = false;
 setTimeout(()=> {halo.remove(); button.src ="https://files.catbox.moe/5b33qo.bmp"},50)
 let angle = 0;
 button.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
+
 
